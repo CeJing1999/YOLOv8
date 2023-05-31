@@ -166,10 +166,10 @@ def main(cfg):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', type=str, default='img', help='检测模式: img、vid')
-    parser.add_argument('--source', type=str, default='data/zidane.jpg', help='待检测文件路径')
+    parser.add_argument('--source', type=str, default='data/street.jpg', help='待检测文件路径')
     parser.add_argument('--save_flag', type=bool, default=True, help='是否保存检测结果')
     parser.add_argument('--save_path', type=str, default='outs/', help='检测结果保存路径')
-    parser.add_argument('--model_path', type=str, default='model_data/epoch500/best_epoch_weights.pt', help='权值文件')
+    parser.add_argument('--model_path', type=str, default='', help='权值文件')
     parser.add_argument('--classes_path', type=str, default='model_data/voc_classes.txt', help='类别文件')
     parser.add_argument('--input_shape', type=Tuple, default=(640, 640), help='输入图像大小')
     parser.add_argument('--stride', type=Tuple, default=(8, 16, 32), help='下采样步长')
